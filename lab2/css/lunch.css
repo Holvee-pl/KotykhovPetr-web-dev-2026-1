@@ -1,0 +1,81 @@
+/* --- Страница «Собрать ланч» --- */
+.lunch-block {
+  background-color: #fff6e3;
+}
+
+/* блок со всеми блюдами */
+.dishes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+/* блок одного блюда */
+.dish {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 40px;
+  border: 2px solid #ffffff;
+  border-radius: 35px;
+  cursor: pointer;
+  filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+  background-color: white;
+}
+
+.dish:hover {
+  border: 2px solid #f0a500;
+}
+
+.dish img {
+  width: 100%;
+  border-radius: 35px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.name {
+  font-size: 18px;
+  flex-grow: 1;
+}
+
+.weight {
+  color: gray;
+}
+
+.dish button {
+  background-color: #f1eee9;
+  margin-top: 10px;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 15px;
+}
+
+.dish:hover button {
+  background-color: #f0a500;
+  color: #ffffff;
+}
+
+/* --- Адаптивность --- */
+@media (max-width: 800px) {
+  .dishes {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .lunch-block h2 {
+    text-align: center;
+  }
+
+  .dishes {
+    grid-template-columns: 1fr;
+  }
+}
